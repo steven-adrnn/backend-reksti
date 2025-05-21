@@ -1,0 +1,38 @@
+Information Gathered:
+- Backend will be implemented using FastAPI.
+- It will handle WebSocket connections from ESP32-CAM for livestream frames.
+- It will forward frames to connected mobile clients via WebSocket.
+- It will run human detection on frames using YOLO model.
+- On human detection, it will record video and save to Supabase Bucket Storage.
+- Metadata of videos will be saved in Supabase PostgreSQL database.
+- User authentication and authorization will be implemented for API access.
+- API endpoints will provide login, video list, and signed URL for video playback.
+
+Plan:
+- app/main.py: Initialize FastAPI app, include routers, and start WebSocket server.
+- app/config.py: Store configuration variables (Supabase keys, WebSocket settings).
+- app/models.py: Define Pydantic models for API requests/responses and database models.
+- app/database.py: Setup Supabase client for database and storage access.
+- app/auth.py: Implement JWT-based user authentication and authorization.
+- app/websocket.py: Handle WebSocket connections from ESP32-CAM and mobile clients, frame forwarding.
+- app/detection.py: Integrate YOLO model for human detection on frames.
+- app/recording.py: Manage video recording from frames, save to Supabase storage, update metadata.
+- app/supabase_client.py: Wrap Supabase storage and database operations.
+- app/api/endpoints.py: Define REST API endpoints for login, video list retrieval, and signed URL generation.
+- app/utils.py: Utility functions as needed.
+- requirements.txt: Include FastAPI, uvicorn, supabase-py, python-jose, opencv-python, torch, and other dependencies.
+- Dockerfile: Containerize the backend app.
+- tests/: Unit and integration tests for auth, websocket, detection, and API.
+
+Dependent Files to be Edited:
+- All files listed above will be created and implemented.
+
+Follow-up Steps:
+- Install dependencies from requirements.txt.
+- Test WebSocket streaming and frame forwarding.
+- Test human detection and recording logic.
+- Test Supabase integration for storage and metadata.
+- Test user authentication and API endpoints.
+- Provide deployment instructions including Docker usage.
+
+Please confirm this plan so I can proceed with the backend implementation.

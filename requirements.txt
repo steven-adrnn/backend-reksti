@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+supabase
+python-jose[cryptography]
+python-multipart
+opencv-python-headless
+torch
+numpy
