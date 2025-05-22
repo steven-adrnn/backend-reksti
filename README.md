@@ -63,6 +63,7 @@ WEBSOCKET_HOST=ws://localhost
 WEBSOCKET_PORT=8000
 SUPABASE_URL=your_supabase_url
 SUPABASE_KEY=your_supabase_anon_key
+SUPABASE_BUCKET=your_supabase_bucket_name
 JWT_SECRET=your_jwt_secret
 ```
 
