@@ -79,9 +79,15 @@ pip install -r requirements.txt
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-5. Connect your ESP32-CAM to the `/ws/camera` WebSocket endpoint to start streaming.
+5. Connect your ESP32-CAM to the `/ws/camera` WebSocket endpoint to start streaming. Kalo mau test pake webcam laptop, run 
+```bash
+python webcam_streamer.py 
+```
 
-6. Connect your mobile app or test client to the `/ws/client` WebSocket endpoint to view livestream.
+6. Connect your mobile app or test client to the `/ws/client` WebSocket endpoint to view livestream. Buat test run
+```bash
+python test_client_ws.py 
+```
 
 ---
 
