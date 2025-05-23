@@ -4,5 +4,17 @@ supabase
 python-jose[cryptography]
 python-multipart
 opencv-python-headless
-torch
+torch==2.2.2  # Specify a compatible version
+torchvision==0.17.2 # Add this line and specify a compatible version
 numpy
+passlib
+python-jose
+dotenv
+pydantic
+pydantic[email]
+pydantic-settings
+postgrest
+pillow
+seaborn
+pandas
+requests
